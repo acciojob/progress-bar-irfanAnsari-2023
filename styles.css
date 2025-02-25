@@ -1,1 +1,59 @@
 /*  your css code here. If applicable */
+body{
+   
+   
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+}
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+.circle.active {
+    border-color: blue;
+    background-color: lightblue;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: lightgrey;
+    cursor: not-allowed;
+}
+.progress-line {
+    position: absolute;
+    height: 5px;
+    width: 0%;
+    background-color: blue;
+    top: 50%;
+    left: 10%;
+    z-index: -1;
+    transition: width 0.3s ease;
+}
